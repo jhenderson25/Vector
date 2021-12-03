@@ -32,8 +32,8 @@ package Week1;
  */
 public class Vector2D {
 
-    private double x;
-    private double y;
+    private final double x;
+    private final double y;
 
     /**
      * A vector can represent a point.
@@ -65,7 +65,7 @@ public class Vector2D {
      */
     public Vector2D add(Vector2D v) {
 
-        return new Vector2D(0.0, 0.0);
+        return new Vector2D(this.getX() + v.getX(), this.getY() + v.getY());
     } // add (Vector2D )
 
     /**
@@ -82,7 +82,7 @@ public class Vector2D {
      */
     public Vector2D scale(double xFactor, double yFactor) {
 
-        return new Vector2D( 0.0, 0.0 );
+        return new Vector2D( xFactor * this.getX(), yFactor * this.getY());
     } // scale( double )
 
     /**
@@ -105,7 +105,7 @@ public class Vector2D {
      */
     public Vector2D scale(double factor) {
 
-        return new Vector2D( 0.0, 0.0 );
+        return new Vector2D( factor * this.getX(), factor * this.getY());
     } // scale( double )
 
     /**
@@ -170,7 +170,7 @@ public class Vector2D {
      */
     public double dot(Vector2D v) {
 
-        return 0.0;
+        return this.getX() * v.getX() + this.getY() * v.getY();
     } // dot( Vector2D )
 
     /**
