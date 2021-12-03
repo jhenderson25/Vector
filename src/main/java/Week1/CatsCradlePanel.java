@@ -15,19 +15,19 @@ public class CatsCradlePanel extends JPanel implements ActionListener {
 
   // Specify the color of the background on which the figures
   // will be drawn.
-  private static final Color BG_COLOR = new Color(72, 12, 12);
-  private static final Color FG_COLOR = new Color(180, 192, 224);
+  private static final Color BG_COLOR = new Color(255, 120, 100);
+  private static final Color FG_COLOR = new Color(80, 12, 22);
   // MARGIN gives some separation between the figures drawn
   // and the edge of the panel in which they are drawn.
   // The value must be at least zero and less than 0.5.
-  private static final double MARGIN = 0.1;
+  private static final double MARGIN = 0.05;
   // Bigger values of SPEED result in a slower animation.
   // Smaller values of SPEED result in a faster animation.
-  private static final double SPEED = 64.0;
+  private static final double SPEED = 32.0;
   // Specify the thickness of the line segments used
   // to draw the inside and outside figures.
   private static final float OUTSIDE_LINE_THICKNESS = 4;
-  private static final float INSIDE_LINE_THICKNESS = 2;
+  private static final float INSIDE_LINE_THICKNESS = 1;
   private int numberOfSides;
   private double outerStep;
   private double innerStep;
@@ -60,9 +60,9 @@ public class CatsCradlePanel extends JPanel implements ActionListener {
       // of 64 and 192 you may use any pair of
       // non-negative integers whose sum is 256
       // (or less than 256 if you wish).
-      int red = 64 + random.nextInt(192);
-      int green = 64 + random.nextInt(192);
-      int blue = 64 + random.nextInt(192);
+      int red = 128 + random.nextInt(126);
+      int green = 128 + random.nextInt(126);
+      int blue = 128 + random.nextInt(126);
       this.colors[i] = new Color(red, green, blue);
     } // for
   } // CatsCradlePanel()
