@@ -18,10 +18,10 @@ public class CatsCradle extends JFrame {
   /**
    * Choose values for these parameters that make a pleasing image---experiment!
    */
-  private static final int FRAME_WIDTH = 512;
-  private static final int FRAME_HEIGHT = 512;
+  private static final int FRAME_WIDTH = 800;
+  private static final int FRAME_HEIGHT = 800;
   private static final String FRAME_TITLE = "Cat's Cradle";
-  private static final int NUMBER_OF_SIDES = 12;
+  private static final int NUMBER_OF_SIDES = 18;
 
   /**
    * Create a window on the screen, put a panel in the
@@ -47,7 +47,7 @@ public class CatsCradle extends JFrame {
     // (Smaller values will result in more images
     // per second: 10 milliseconds between images
     // equals 100 images/second.)
-    Timer timer = new Timer(20, panel);
+    Timer timer = new Timer(15, panel);
     timer.start();
 
     this.setVisible(true);
